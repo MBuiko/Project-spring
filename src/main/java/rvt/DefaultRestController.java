@@ -12,8 +12,8 @@ public class DefaultRestController {
 
     @RequestMapping(value = "/student", produces = MediaType.APPLICATION_JSON_VALUE)
     String getAllStudents() {
-        Student student = 
-        new Student("Jānis",
+        Students student = 
+        new Students("Jānis",
         "Smith",
         "j@s.lv",
         "DP2-1");

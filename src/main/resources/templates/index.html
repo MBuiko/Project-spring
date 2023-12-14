@@ -8,5 +8,45 @@
 <body>
     <p>Get your student <a href="/student">here</a></p>
     <h1>Spring Boot!</h1>
+    <p th:text="${name}"></p>
+
+    <div th:each="item : ${hobbies}">
+        <h4 th:text="${item.id}"></h4>
+        <h5 th:text="${item.title}"></h5>
+</div>
+
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    
+    <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>content</th>
+        </tr>
+        <tr th:each="item: ${hobbies}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.title}"></td>  
+            <td th:text="${item.content}"></td>
+        </tr>
+    </table>
+
+    <div th:each="item : ${hikingitems}">
+        <h3 th:text="${item}"></h3></div>
 </body>
 </html>
